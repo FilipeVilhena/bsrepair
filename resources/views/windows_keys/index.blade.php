@@ -12,15 +12,23 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($windowsKeys as $key)
+            @forelse($windowsKeys as $key)
             <tr>
                 <td>
-                    <img src="{{ asset('storage/' . $key->image) }}" alt="{{ $key->name }}" width="80">
+                    @if($key->image)
+                        <img src="{{ asset('storage/' . $key->image) }}" alt="{{ $key->name }}" width="80">
+                    @else
+                        <span>No image</span>
+                    @endif
                 </td>
                 <td>{{ $key->name }}</td>
                 <td>${{ number_format($key->price, 2) }}</td>
             </tr>
-            @endforeach
+            @empty
+            <tr>
+                <td colspan="3" class="text-center">No Windows Keys found.</td>
+            </tr>
+            @endforelse
         </tbody>
     </table>
 </div>

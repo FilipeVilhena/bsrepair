@@ -16,6 +16,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-Route::get('/windows_keys', [WindowsKeyController::class, 'index'])->name('windows_keys.index');
-Route::get('/windows_keys/create', [WindowsKeyController::class, 'create'])->name('windows_keys.create');
-Route::get('/windows_keys/{id}', [WindowsKeyController::class, 'show'])->name('windows_keys.show');
+// Use the WindowsKeyController for better structure and maintainability
+Route::get('/windows_keys/create', function () {
+    return view('windows_keys.create');
+})->name('windows_keys.create');

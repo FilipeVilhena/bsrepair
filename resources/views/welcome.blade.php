@@ -5,16 +5,7 @@
         </h2>
     </x-slot>
 
-    <body class="bg-gray-50">
-        <nav class="bg-blue-700">
-            <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-                <a class="text-white text-2xl font-bold" href="#">KeyStore</a>
-                <button class="block md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-            </div>
+
         </nav>
         <header class="bg-white py-16 shadow">
             <div class="container mx-auto text-center">
@@ -38,7 +29,7 @@
             </div>
         </section>
         <footer class="bg-blue-700 text-white text-center py-4">
-            &copy; {{ date('Y') }} KeyStore. All rights reserved.
+            &copy; {{ date('Y') }} KeyForAll. All rights reserved.
         </footer>
     </body>
 </x-guest-layout>
